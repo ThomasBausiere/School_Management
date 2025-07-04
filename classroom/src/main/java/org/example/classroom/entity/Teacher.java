@@ -1,4 +1,4 @@
-package org.example.student.entity;
+package org.example.teacher.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.Entity;
@@ -13,20 +13,16 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 @Entity
-@NoArgsConstructor
 @AllArgsConstructor
-@Data
+@NoArgsConstructor
 @Builder
-public class Student {
-
+@Data
+public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     private String name;
     private String surname;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,  pattern = "dd-MM-yyyy")
     private LocalDate birthDate;
-    private int classroomId;
-
 }
