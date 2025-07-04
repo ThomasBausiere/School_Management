@@ -18,16 +18,9 @@ public class Classroom {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @ManyToOne
-    @JoinColumn(name = "teacher_id")
-    private Teacher teacher;
-    @OneToMany(mappedBy = "classroomId")
-    private List<Student> students;
 
-    public ClassroomResponseDTO entityToDTO(){
-        return ClassroomResponseDTO.builder()
-                .teacher(getTeacher())
-                .students(getStudents())
-                .build();
-    }
+    private Integer teacherId;
+
+    @ElementCollection
+    private List<Integer> studentIds;
 }
