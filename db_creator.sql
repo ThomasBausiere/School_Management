@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS bdd_sm_student;
+CREATE DATABASE IF NOT EXISTS bdd_sm_teacher;
+CREATE DATABASE IF NOT EXISTS bdd_sm_classroom;
