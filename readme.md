@@ -14,16 +14,15 @@ L'application repose sur une architecture distribuée avec **Spring Boot**, **Eu
 
 ## 🧱 Architecture
 
-Le repository est structuré comme suit :
-
+```
 School_Management/
-│
-├── eureka-server # Service Eureka pour la découverte des microservices
-├── gateway # API Gateway pour centraliser les routes
-├── student # Microservice de gestion des étudiants
-├── teacher # Microservice de gestion des professeurs
-├── classroom # Microservice de gestion des classes
-└── script # Scripts SQL pour initialiser et remplir les bases de données
+├── eureka-server/       → Microservice de découverte (Eureka)
+├── gateway/             → API Gateway pour centraliser les endpoints
+├── student/             → Microservice dédié à la gestion des étudiants
+├── teacher/             → Microservice dédié à la gestion des professeurs
+├── classroom/           → Microservice dédié à la gestion des classes (étudiants + professeurs)
+└── script/              → Scripts SQL pour créer et alimenter les bases de données
+```
 
 ---
 
